@@ -1,0 +1,547 @@
+{
+  "version": "0.1.0",
+  "author": "Juan I. Gesino",
+  "private": true,
+  "dependencies": {},
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": [
+        {
+          "type": "font",
+          "characterRegex": "[]",
+          "compatibility": "2.7",
+          "file": "fonts/weathericons-regular-webfont.ttf",
+          "name": "FONT_WEATHER_24",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[]",
+          "compatibility": "2.7",
+          "file": "fonts/weathericons-regular-webfont.ttf",
+          "name": "FONT_WEATHER_16",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[a-zA-Z0-7*()#$%]",
+          "compatibility": "2.7",
+          "file": "fonts/custom-icons.ttf",
+          "name": "FONT_ICONS_20",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_19",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_32",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9: ]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_64",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_16",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_24",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/Blocko.ttf",
+          "name": "FONT_BLOCKO_56",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/leco-regular.ttf",
+          "name": "FONT_LECO_14",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/leco-regular.ttf",
+          "name": "FONT_LECO_21",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/leco-regular.ttf",
+          "name": "FONT_LECO_47",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/konstruct.ttf",
+          "name": "FONT_KONSTRUCT_11",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/konstruct.ttf",
+          "name": "FONT_KONSTRUCT_17",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/konstruct.ttf",
+          "name": "FONT_KONSTRUCT_33",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/ArchivoNarrow-Bold.ttf",
+          "name": "FONT_ARCHIVO_18",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/ArchivoNarrow-Bold.ttf",
+          "name": "FONT_ARCHIVO_28",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/ArchivoNarrow-Bold.ttf",
+          "name": "FONT_ARCHIVO_56",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/OSP-DIN.ttf",
+          "name": "FONT_DIN_20",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/OSP-DIN.ttf",
+          "name": "FONT_DIN_26",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/OSP-DIN.ttf",
+          "name": "FONT_DIN_58",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Prototype.ttf",
+          "name": "FONT_PROTOTYPE_16",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:a-zA-Z.+%!()/= -]",
+          "compatibility": "2.7",
+          "file": "fonts/Prototype.ttf",
+          "name": "FONT_PROTOTYPE_22",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        },
+        {
+          "type": "font",
+          "characterRegex": "[0-9:]",
+          "compatibility": "2.7",
+          "file": "fonts/Prototype.ttf",
+          "name": "FONT_PROTOTYPE_48",
+          "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+          ]
+        }
+      ]
+    },
+    "projectType": "native",
+    "uuid": "1354d7dc-b9e5-420d-9edf-533ee2fd4520",
+    "messageKeys": {
+      "KEY_UPDATE": 33,
+      "KEY_ENABLEWEATHER": 7,
+      "KEY_DATEFORMAT": 37,
+      "KEY_USECAL": 47,
+      "KEY_LEADINGZERO": 46,
+      "KEY_ENABLEADVANCED": 13,
+      "KEY_WEATHERKEY": 8,
+      "KEY_MINCOLOR": 20,
+      "KEY_MIN": 2,
+      "KEY_BLUETOOTHCOLOR": 30,
+      "KEY_TEXTALIGN": 38,
+      "KEY_OVERRIDELOCATION": 31,
+      "KEY_ERROR": 32,
+      "KEY_USEKM": 5,
+      "KEY_BGCOLOR": 11,
+      "KEY_STEPSBEHINDCOLOR": 39,
+      "KEY_SPEED": 59,
+      "KEY_DISTBEHINDCOLOR": 40,
+      "KEY_WEATHERPROVIDER": 43,
+      "KEY_STEPSCOLOR": 22,
+      "KEY_MAX": 1,
+      "KEY_SLEEPSLOTA": 53,
+      "KEY_SLEEPSLOTC": 55,
+      "KEY_SLEEPSLOTB": 54,
+      "KEY_DATECOLOR": 14,
+      "KEY_SLEEPSLOTD": 56,
+      "KEY_MAXCOLOR": 21,
+      "KEY_SLEEP": 41,
+      "KEY_SHOWSLEEP": 6,
+      "KEY_FEELS": 58,
+      "KEY_SIMPLEMODE": 48,
+      "KEY_DEEP": 42,
+      "KEY_ENABLEHEALTH": 4,
+      "KEY_LOCALE": 36,
+      "KEY_TIMEZONESCODE": 24,
+      "KEY_WEATHERCOLOR": 18,
+      "KEY_DIST": 28,
+      "KEY_FONTTYPE": 26,
+      "KEY_HASUPDATE": 35,
+      "KEY_CAL": 57,
+      "KEY_HOURSCOLOR": 12,
+      "KEY_ALTHOURSCOLOR": 15,
+      "KEY_STEPS": 27,
+      "KEY_BLUETOOTHDISCONNECT": 29,
+      "KEY_USECELSIUS": 9,
+      "KEY_DISTCOLOR": 23,
+      "KEY_SLOTD": 52,
+      "KEY_UPDATECOLOR": 34,
+      "KEY_SLOTA": 49,
+      "KEY_SLOTC": 51,
+      "KEY_DIRECTION": 60,
+      "KEY_BATTERYLOWCOLOR": 17,
+      "KEY_TEMP": 0,
+      "KEY_SLOTB": 50,
+      "KEY_TIMEZONES": 10,
+      "KEY_TIMEZONESMINUTES": 25,
+      "KEY_BATTERYCOLOR": 16,
+      "KEY_CONFIGS": 45,
+      "KEY_YAHOOKEY": 44,
+      "KEY_TEMPCOLOR": 19,
+      "KEY_WEATHER": 3,
+      "KEY_WINDDIRCOLOR": 61,
+      "KEY_WINDSPEEDCOLOR": 62,
+      "KEY_CALCOLOR": 63,
+      "KEY_CALBEHINDCOLOR": 64,
+      "KEY_SPEEDUNIT": 65,
+      "KEY_SLEEPCOLOR": 66,
+      "KEY_SLEEPBEHINDCOLOR": 67,
+      "KEY_DEEPCOLOR": 68,
+      "KEY_DEEPBEHINDCOLOR": 69,
+      "KEY_QUICKVIEW": 70,
+      "KEY_DATESEPARATOR": 71,
+      "KEY_SUNRISE": 72,
+      "KEY_SUNSET": 73,
+      "KEY_SUNRISECOLOR": 74,
+      "KEY_SUNSETCOLOR": 75,
+      "KEY_ACTIVECOLOR": 76,
+      "KEY_ACTIVEBEHINDCOLOR": 77,
+      "KEY_ACTIVE": 78,
+      "KEY_TAPSLOTA": 79,
+      "KEY_TAPSLOTB": 80,
+      "KEY_TAPSLOTC": 81,
+      "KEY_TAPSLOTD": 82,
+      "KEY_TAPTIME": 83,
+      "KEY_SHOWTAP": 84,
+      "KEY_HEART": 85,
+      "KEY_HEARTCOLOR": 86,
+      "KEY_HEARTCOLOROFF": 87,
+      "KEY_WEATHERTIME": 88,
+      "KEY_HEARTLOW": 89,
+      "KEY_HEARTHIGH": 90,
+      "KEY_COMPASSCOLOR": 91,
+      "KEY_WRISTSLOTA": 92,
+      "KEY_WRISTSLOTB": 93,
+      "KEY_WRISTSLOTC": 94,
+      "KEY_WRISTSLOTD": 95,
+      "KEY_SHOWWRIST": 96,
+      "KEY_SECONDSCOLOR": 97,
+      "KEY_SLOTE": 98,
+      "KEY_SLOTF": 99,
+      "KEY_SLEEPSLOTE": 100,
+      "KEY_SLEEPSLOTF": 101,
+      "KEY_TAPSLOTE": 102,
+      "KEY_TAPSLOTF": 103,
+      "KEY_WRISTSLOTE": 104,
+      "KEY_WRISTSLOTF": 105,
+      "KEY_MUTEONQUIET": 106,
+      "KEY_TIMEZONESB": 107,
+      "KEY_TIMEZONESBCODE": 108,
+      "KEY_TIMEZONESBMINUTES": 109,
+      "KEY_CRYPTOFROM": 110,
+      "KEY_CRYPTOTO": 111,
+      "KEY_CRYPTOFROMB": 112,
+      "KEY_CRYPTOTOB": 113,
+      "KEY_CRYPTOPRICE": 114,
+      "KEY_CRYPTOPRICEB": 115,
+      "KEY_ALTHOURSBCOLOR": 116,
+      "KEY_CRYPTOCOLOR": 117,
+      "KEY_CRYPTOBCOLOR": 118,
+      "KEY_REQUESTWEATHER": 119,
+      "KEY_REQUESTCRYPTO": 120,
+      "KEY_CRYPTOMARKET": 121,
+      "KEY_CRYPTOMARKETB": 122,
+      "KEY_CRYPTOCCOLOR": 123,
+      "KEY_CRYPTODCOLOR": 124,
+      "KEY_CRYPTOPRICEC": 125,
+      "KEY_CRYPTOPRICED": 126,
+      "KEY_CRYPTOMARKETC": 127,
+      "KEY_CRYPTOMARKETD": 128,
+      "KEY_CRYPTOTIME": 129
+    },
+    "enableMultiJS": true,
+    "displayName": "Timeboxed",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": true
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "capabilities": [
+      "location",
+      "configurable",
+      "health"
+    ]
+  },
+  "name": "Casio",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "bootstrap": "4.0.0-alpha.4",
+    "bootstrap-loader": "^1.0.10",
+    "bootstrap-toggle": "^2.2.2",
+    "classnames": "^2.2.3",
+    "compression-webpack-plugin": "^0.3.1",
+    "css-loader": "^0.23.1",
+    "es6-promise": "^3.2.1",
+    "eslint": "^4.1.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-prefer-object-spread": "^1.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.1.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.15.0",
+    "imports-loader": "^0.6.5",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery-slim": "^3.0.0",
+    "js-base64": "^2.3.2",
+    "node-sass": "^3.4.2",
+    "object-assign": "^4.1.1",
+    "postcss-loader": "^0.9.1",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "prettier": "^1.7.0",
+    "prettier-eslint": "^8.1.1",
+    "prettier-eslint-cli": "^4.3.2",
+    "react-dropdown": "^1.3.2",
+    "react-fastclick": "^2.1.2",
+    "react-fastclick-alt": "^1.0.1",
+    "react-input-toggle": "^0.3.0",
+    "react-toggle": "^4.0.2",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.2.0",
+    "strip-comments": "^0.4.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.10.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./configs/webpack-config.js --bail --colors --progress",
+    "build:watch": "webpack --config ./configs/webpack-config.js --watch --colors --progress",
+    "clean": "rm -rf configs/dist/ && rm -rf node_modules/ && rm -rf configs/deploy/ && mkdir configs/deploy",
+    "deploy": "mkdir -p configs/deploy/dist/ && cp -R configs/server/* configs/deploy/ && cp -R configs/dist/* configs/deploy/dist/",
+    "build:deploy": "npm run build:configs && mkdir -p configs/deploy/dist/ && cp -R configs/server/* configs/deploy/ && cp -R configs/server-common/* configs/deploy/ && cp -R configs/dist/* configs/deploy/dist/",
+    "build:deploy:start": "npm run build:deploy && (cd configs/deploy && npm install && node server.js)",
+    "build:configs": "webpack --config ./configs/webpack-config.js --bail --colors --progress && (cd configs/standalone-config && node ./generate-config.js) && mv configs/standalone-config/generated.js src/js/settings/generated.js",
+    "build:all": "npm run build:configs && pebble build",
+    "build:phone": "npm run build:all && pebble install --phone",
+    "build:emulator": "npm run build:all && pebble install --emulator chalk"
+  }
+}

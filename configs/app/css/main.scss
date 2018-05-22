@@ -1,0 +1,410 @@
+// Core variables and mixins
+@import 'node_modules/bootstrap/scss/custom';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+// Reset and dependencies
+@import 'node_modules/bootstrap/scss/normalize';
+
+// Core CSS
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/type';
+@import 'node_modules/bootstrap/scss/forms';
+@import 'node_modules/bootstrap/scss/buttons';
+
+// Components
+@import 'node_modules/bootstrap/scss/button-group';
+@import 'node_modules/bootstrap/scss/list-group';
+@import 'node_modules/bootstrap/scss/card';
+@import 'node_modules/bootstrap/scss/nav';
+
+$bg: #555;
+$lighter-bg: #666;
+$text: #FFF;
+$hint-text: #CCC;
+$btn-text: #FFF;
+$shadow: #333;
+$border: #444;
+$accent: #0090d8;
+$accent-dark: #007bb9;
+$secondary-accent: #4c964d;
+$secondary-accent-dark: #428243;
+
+html,
+body {
+    font-size: 12px;
+    color: $text;
+    background-color: $bg;
+}
+
+.title {
+    margin: 1rem 0;
+    padding: 1rem 0 1.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
+    background-color: $lighter-bg;
+    font-size: 2rem;
+    text-transform: uppercase;
+    -webkit-box-shadow: 1px 1px 4px 0 $shadow; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 1px 1px 4px 0 $shadow; /* Firefox 3.5 - 3.6 */
+    box-shadow: 1px 1px 4px 0 $shadow; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.version {
+    font-size: 1rem;
+    text-align: center;
+    margin: -2.5rem 0.5rem 2rem 0;
+    display: block;
+    min-height: 18px;
+}
+
+.form-control {
+    font-size: 12px;
+    height: 28px;
+    color: $btn-text;
+    background-color: $bg;
+    border: 1px solid $border;
+
+    &:focus:active, &:focus {
+        background-color: $lighter-bg;
+        color: $text;
+    }
+
+    &::placeholder {
+        color: $lighter-bg;
+    }
+}
+
+.toggle.btn {
+    min-height: 28px;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 6px;
+}
+
+.field-label {
+    display: block;
+    width: 140px;
+    font-weight: bold;
+}
+
+.field--long-label {
+    .field-label {
+        flex-grow: 1;
+    }
+    .field-content {
+        flex-grow: 0;
+    }
+}
+
+.field--long {
+    flex-direction: column;
+    align-items: stretch;
+    .field-label {
+        width: 100%;
+        padding-right: 4px;
+    }
+}
+
+.field--long-reverse {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    .field-label {
+        width: 100%;
+        padding-right: 4px;
+    }
+    .field-label {
+        margin-top: 4px;
+    }
+}
+
+.field-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    height: 36px;
+    align-items: center;
+}
+
+.field-content-inner {
+    width: 100%;
+}
+
+.btn-outline-primary {
+    color: $accent;
+    border-color: $accent;
+
+    &:hover, &:active:focus, &:focus {
+        border-color: transparent;
+        background-color: $accent;
+        color: $btn-text;
+    }
+}
+
+.btn-outline-primary.active {
+    color: $btn-text;
+    border-color: $accent;
+    background-color: $accent;
+
+    &:hover, &:active:focus, &:focus {
+        border-color: $accent-dark;
+        background-color: $accent-dark;
+    }
+}
+
+.btn-primary {
+    color: $btn-text;
+    background-color: $accent;
+    border-color: $accent;
+
+    &:hover, &:active:focus, &:focus {
+        border-color: $accent-dark;
+        background-color: $accent-dark;
+    }
+}
+
+.field-text {
+    display: flex;
+
+    .form-control {
+        height: 32px;
+    }
+}
+
+.list-group-item {
+    color: $btn-text;
+    background-color: $bg;
+    border: 1px solid $border;
+}
+
+.field-text--btn {
+    width: 100px;
+    margin-left: 12px;
+}
+
+.field-container {
+    width: 100%;
+}
+
+.side-by-side {
+    display: flex;
+}
+
+.side-by-side--left,
+.side-by-side--right {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.side-by-side--right.label--right {
+    .field-label {
+        text-align: right;
+    }
+}
+
+.helper-text {
+    color: $hint-text;
+    line-height: 14px;
+    text-align: left;
+}
+
+.helper-text--field {
+    margin-top: -8px;
+    margin-bottom: 8px;
+    padding: 0 6px;
+}
+
+.helper-text--standalone {
+    padding: 6px;
+}
+
+.btn-submit {
+    margin: 12px;
+}
+
+.btn--donate {
+    margin-left: 6px;
+    color: $btn-text;
+    background-color: $secondary-accent;
+    border-color: $secondary-accent;
+
+    &:hover {
+        border-color: $secondary-accent-dark;
+        background-color: $secondary-accent-dark;
+    }
+}
+
+.color-picker {
+    position: relative;
+}
+
+.color-panel {
+    display: flex;
+    justify-content: center;
+    position: static;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 6px;
+    margin-top: -12px;
+}
+
+.color-panel--shim {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 1;
+}
+
+.color-panel--swatches {
+    z-index: 2;
+    width: 380px;
+}
+
+.color-panel--swatch-item {
+    width: 32px;
+    height: 28px;
+    border-radius: 3px;
+    margin: 1px 1px 0 0;
+}
+
+.color-panel--swatch-row {
+    display: flex;
+    justify-content: center;
+}
+
+.swatch {
+    height: 32px;
+    width: 56px;
+    padding: 4px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.swatch--color {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-group {
+    display: flex;
+    .btn {
+        flex-grow: 1;
+        width: 10px;
+    }
+}
+
+.toggle.react-toggle--checked .react-toggle-track,
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: $accent;
+}
+
+.toggle.react-toggle--checked .react-toggle-thumb {
+    border-color: $accent;
+}
+
+.card--custom {
+    -webkit-box-shadow: 1px 1px 4px 0 $shadow; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 1px 1px 4px 0 $shadow; /* Firefox 3.5 - 3.6 */
+    box-shadow: 1px 1px 4px 0 $shadow; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    margin: 8px;
+    border-radius: 4px;
+    background-color: $bg;
+}
+
+.block--footer {
+    padding: 0 12px 12px;
+}
+
+.block--submit {
+    text-align: center;
+}
+
+.card-block--custom {
+    padding: 0 6px 6px 6px;
+}
+
+.card-header {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    background-color: $lighter-bg;
+}
+
+label {
+    margin-bottom: initial;
+    display: initial;
+}
+
+.dropdown {
+    height: 32px;
+}
+
+.remove-preset {
+    color: $text;
+    display: block;
+    padding: 0 6px;
+    margin-right: -6px;
+    float: right;
+}
+
+.debug-list {
+    list-style-type: none;
+}
+
+.donate-buttons {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.card-header.subtitle {
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: $lighter-bg;
+}
+
+.Dropdown-root.dropdown {
+    .Dropdown-control, .Dropdown-menu, .Dropdown-option {
+        color: $text;
+        border-color: $border;
+        background-color: $bg;
+    }
+
+    .Dropdown-option {
+        &.is-selected, &:hover {
+            background-color: $lighter-bg;
+            color: $text;
+        }
+    }
+}
+
+.nav {
+    border-bottom: 1px solid $border;
+    .nav-link:hover {
+        border: 1px solid $border;
+    }
+    .nav-link.active, .nav-link.active:hover {
+        color: $text;
+        background-color: $lighter-bg;
+        border-color: $border $border transparent $border;
+    }
+}
+
+a {
+    color: $accent;
+    &:hover, &:active:focus, &:focus {
+        color: $accent-dark;
+    }
+}

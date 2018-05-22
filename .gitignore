@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+/.lock-*
+/build/
+/out/
+*.sw*
+
+node_modules/
+npm-debug.log
+.clang_complete
